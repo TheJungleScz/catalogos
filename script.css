@@ -1,0 +1,180 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.producto {
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+.descripcion {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+.producto:hover .descripcion {
+    display: block;
+}
+
+
+.producto img {
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+.producto img:hover {
+    transform: scale(1.1);
+}
+
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background-color: #25D366;
+    color: white; 
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+a:hover {
+    background-color: #20b858;
+    transform: scale(1.05);
+}
+
+
+.banner-izquierdo {
+    position: fixed;       
+    left: 0;                
+    top: 50%;                 
+    transform: translateY(-50%); 
+    width: 220px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;  
+}
+
+
+.producto-banner {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.producto-banner img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+.producto-banner img:hover {
+    transform: scale(1.05);
+}
+
+
+.producto banner p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+
+.banner-superior {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background: #ffffff;
+    height: 100px;
+    padding: 0 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.izquierda {
+    display: none;
+}
+
+
+.derecha {
+    display: none;
+}
+
+
+.banner-item {
+    flex: 1;
+    text-align: center;
+}
+
+
+.banner-item img {
+    max-height: 80px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+.banner-item img:hover {
+    transform: scale(1.05);
+}
+
+
+.logo {
+    height: 220px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.contenedor-principal {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    min-height: 80;
+}
+
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    text-align: left;
+    margin-left: 270px;
+}
+
+
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
