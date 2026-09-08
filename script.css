@@ -192,11 +192,13 @@ a:hover {
     .banner-item.titulo {
         flex: 1 1 100%;
         text-align: center;
+        width: 100%;
     }
 
     .logo {
         width: 100%;
         height: auto;
         display: block;
+        margin: 0 auto;
     }
 }
