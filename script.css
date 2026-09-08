@@ -223,5 +223,8 @@ a:hover {
 
     .banner-izquierdo {
         display: none;
+        width: 0;
+        margin: 0;
+        padding: 0;
     }
 }
