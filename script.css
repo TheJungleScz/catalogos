@@ -198,12 +198,13 @@ a:hover {
 
     .logo {
         width: 100%;
-        height: auto;
+        height: auto;  
         display: block;
         margin: 0 auto;
     }
 
     .contenedor-principal {
+        flex-direction: column;
         width: 100%;
         max-width: 100%;
         margin: 0;
