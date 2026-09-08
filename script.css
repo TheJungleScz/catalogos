@@ -179,3 +179,23 @@ a:hover {
         margin-left: 0;
     }
 }
+
+
+@media (max-width: 768px) {
+    .banner-superior {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .banner-item.titulo {
+        flex: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo {
+        max-height: 80px;
+        margin: 0 auto;
+        display: block;
+    }
+}
