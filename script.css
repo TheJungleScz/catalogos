@@ -165,7 +165,10 @@ a:hover {
     display: flex;
     align-items: flex-start;
     margin-top: 20px;
-    min-height: 80;
+    min-height: 80px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 
