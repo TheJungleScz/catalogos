@@ -183,19 +183,20 @@ a:hover {
 
 @media (max-width: 768px) {
     .banner-superior {
+        display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
     }
 
     .banner-item.titulo {
-        flex: 1;
+        flex: 1 1 100%;
         text-align: center;
     }
 
     .logo {
-        max-width: 100%;
+        width: 100%;
         height: auto;
-        margin: 0 auto;
         display: block;
     }
 }
