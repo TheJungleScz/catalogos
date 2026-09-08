@@ -181,7 +181,7 @@ a:hover {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
     .banner-superior {
         justify-content: center;
         align-items: center;
