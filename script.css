@@ -188,13 +188,13 @@ a:hover {
     }
 
     .banner-item.titulo {
-        flex: none;
+        flex: 1;
         text-align: center;
-        width: 100%;
     }
 
     .logo {
-        max-height: 80px;
+        max-width: 100%;
+        height: auto;
         margin: 0 auto;
         display: block;
     }
