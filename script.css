@@ -173,7 +173,7 @@ a:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .productos {
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
@@ -181,7 +181,7 @@ a:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .banner-superior {
         display: flex;
         justify-content: center;
