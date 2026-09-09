@@ -26,6 +26,7 @@ html, body {
     max-width: 100%;
     position: relative;
     z-index: 10;
+    overflow: visible;
 }
 
 .izquierda, .derecha {
@@ -43,13 +44,12 @@ html, body {
 }
 
 .logo {
-    height: 90px; 
+    height: 225px; 
     width: auto;
     max-width: 100%;
     margin: 0 auto;
     display: block;
-    transform: scale(2.5);
-    transform-origin: center;
+    transform: none;
 }
 
 .contenedor-principal {
