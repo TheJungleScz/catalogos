@@ -19,7 +19,7 @@ html, body {
     justify-content: space-between; 
     align-items: center;
     background: #ffffff;
-    height: 100px;
+    height: 130px;
     padding: 0 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     width: 100%;
@@ -43,7 +43,7 @@ html, body {
 }
 
 .logo {
-    height: 90px; /* antes 250px, se salía del banner */
+    height: 120px; 
     width: auto;
     max-width: 100%;
     margin: 0 auto;
@@ -69,7 +69,6 @@ html, body {
 }
 
 .producto {
-    /* QUITÉ el margin: 20px y el inline-block */
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -152,17 +151,16 @@ a:hover {
     margin-top: 5px;
 }
 
-/* --- MOVIL --- */
 @media (max-width: 980px) {
     .banner-superior {
         justify-content: center;
-        height: 80px;
+        height: 100px;
     }
 
     .logo {
-        width: 90%;
+        width: 95%;
         height: auto;
-        max-height: 70px;
+        max-height: 90px;
     }
 
     .contenedor-principal {
