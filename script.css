@@ -43,7 +43,7 @@ html, body {
 }
 
 .logo {
-    height: 120px; 
+    height: 140px; 
     width: auto;
     max-width: 100%;
     margin: 0 auto;
@@ -160,7 +160,7 @@ a:hover {
     .logo {
         width: 95%;
         height: auto;
-        max-height: 90px;
+        max-height: 120px;
     }
 
     .contenedor-principal {
