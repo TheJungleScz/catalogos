@@ -19,7 +19,7 @@ html, body {
     justify-content: space-between; 
     align-items: center;
     background: #ffffff;
-    height: 130px;
+    height: 100px;
     padding: 0 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     width: 100%;
@@ -43,11 +43,13 @@ html, body {
 }
 
 .logo {
-    height: 140px; 
+    height: 90px; 
     width: auto;
     max-width: 100%;
     margin: 0 auto;
     display: block;
+    transform: scale(1.8);
+    transform-origin: center;
 }
 
 .contenedor-principal {
@@ -161,6 +163,8 @@ a:hover {
         width: 95%;
         height: auto;
         max-height: 120px;
+        transform: scale(1.3);
+        transform-origin: center;
     }
 
     .contenedor-principal {
