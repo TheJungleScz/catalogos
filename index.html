@@ -109,5 +109,40 @@
     </div>
 
     <script src="script.js"></script>
+    <button id="themeToggle" class="theme-toggle-float" aria-label="Cambiar tema">☀️</button>
+    <div id="themeOverlay" class="theme-overlay">
+    </div>
+    <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const overlay = document.getElementById('themeOverlay');
+    const html = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    html.setAttribute('data-theme', savedTheme);
+    toggleBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+    toggleBtn.addEventListener('click', () => {
+        const rect = toggleBtn.getBoundingClientRect();
+        overlay.style.left = (rect.left + rect.width/2) + 'px';
+        overlay.style.top = (rect.top + rect.height/2) + 'px';
+    
+        const isDark = html.getAttribute('data-theme') === 'dark';
+    
+        overlay.classList.toggle('light', !isDark ? false : true);
+        if(isDark) overlay.classList.remove('light');
+        else overlay.classList.add('light');
+    
+        overlay.classList.add('active');
+    
+        setTimeout(() => {
+            const newTheme = isDark ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            toggleBtn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        }, 300);
+    
+        setTimeout(() => overlay.classList.remove('active'), 1000);
+   });
+   </script>
 </body>
 </html>
