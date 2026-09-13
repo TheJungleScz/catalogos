@@ -204,11 +204,22 @@ a:hover {
     --border-card: #333;
 }
 
-html, body, .banner-superior, .producto, .banner-izquierdo {
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+html {
+    background: var(--bg-body);
+    min-height: 100%;
+}
+body {
+    background: var(--bg-body);
+    min-height: 100vh;
+    margin: 0;
+}
+[data-theme="dark"] html, [data-theme="dark"] body {
+    background: var(--bg-body);
 }
 
-[data-theme="dark"] body { background: var(--bg-body); color: var(--text-main); }
+.banner-superior, .producto, .banner-izquierdo {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
 [data-theme="dark"] .banner-superior { background: var(--bg-banner); }
 [data-theme="dark"] .producto { background: var(--bg-card); border-color: var(--border-card); }
 [data-theme="dark"] .banner-izquierdo { background: var(--bg-card); border-color: var(--border-card); }
@@ -221,26 +232,30 @@ html, body, .banner-superior, .producto, .banner-izquierdo {
     right: 25px;
     width: 56px;
     height: 56px;
-    background: #ffffff;
-    border: 1px solid #ccc;
+    background: #121212;
+    border: none;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 100;
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .theme-toggle-float:hover { transform: scale(1.1) rotate(15deg); }
-[data-theme="dark"] .theme-toggle-float { background: #1e1e1e; border-color: #333; }
+.theme-toggle-float:active { transform: scale(0.9); }
+
+[data-theme="dark"] .theme-toggle-float {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+}
 
 @media (max-width: 980px) {
     .theme-toggle-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
 }
 
-/* OVERLAY CIRCULAR ANIMADO */
 .theme-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -250,7 +265,7 @@ html, body, .banner-superior, .producto, .banner-izquierdo {
     transform: translate(-50%, -50%);
     z-index: 9999;
     pointer-events: none;
-    transition: width 0.7s ease, height 0.7s ease;
+    transition: width 0.45s ease, height 0.45s ease; /* más rápido */
 }
 .theme-overlay.active { width: 350vmax; height: 350vmax; }
 .theme-overlay.light { background: #f2f2f2; }
